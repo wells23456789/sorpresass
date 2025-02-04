@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Tí</title>
+  <link rel="icon" href="imagenes/love.png" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #07589a, #0789d9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .content {
+      text-align: center;
+      margin-bottom: 200px;
+    }
+
+    .neon-text {
+        position: relative;
+       
+      font-size: 70px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow:
+        0 0 5px #fff, 0 0 10px #fff, 0 0 20px #1764a7, 0 0 30px #1251cf, 
+        0 0 40px #0986d4, 0 0 50px #009dff, 0 0 75px #161cdb;
+      display: inline-block;
+    }
+
+    .button {
+      position: absolute;
+      margin-top: 220px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      background-color: #1ea3ac;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: bold;
+      box-shadow: 0 0 10px #18ca98;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #3e7dcf;
+      box-shadow: 0 0 20px #08faba;
+    }
+
+    .fras{
+        position: absolute;
+        margin-top: 90px;
+        font-size: 60px;
+        color: rgb(242, 243, 245);
+        text-shadow:
+        0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0ee770, 0 0 30px #06ba8a, 
+        0 0 40px #31b00b, 0 0 50px #0ac75f, 0 0 75px #161cdb;
+    }
+    .img1{
+        position: absolute;
+        
+        width: 200px;
+        height: 200px;
+        top: 60px;
+        left: 50px;
+        transform: rotateZ(-45deg);
+        clip-path: polygon(50% 15%, 61% 4%, 75% 0%, 87% 5%, 100% 20%, 
+                       100% 37%, 91% 50%, 75% 67%, 50% 90%, 25% 67%, 
+                       9% 50%, 0% 37%, 0% 20%, 13% 5%, 25% 0%, 39% 4%);
+    }
+    .img2{
+        position: absolute;
+        
+        width: 200px;
+        height: 200px;
+        top: 60px;
+        right: 50px;
+        transform: rotateZ(45deg);
+        border-radius: 10px;
+        clip-path: polygon(50% 15%, 61% 4%, 75% 0%, 87% 5%, 100% 20%, 
+                       100% 37%, 91% 50%, 75% 67%, 50% 90%, 25% 67%, 
+                       9% 50%, 0% 37%, 0% 20%, 13% 5%, 25% 0%, 39% 4%);
+    }
+    .img3{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        bottom: 60px;
+        right: 50px;
+        transform: rotateZ(45deg);
+        clip-path: polygon(50% 15%, 61% 4%, 75% 0%, 87% 5%, 100% 20%, 
+                       100% 37%, 91% 50%, 75% 67%, 50% 90%, 25% 67%, 
+                       9% 50%, 0% 37%, 0% 20%, 13% 5%, 25% 0%, 39% 4%);
+    }
+    .img4 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 60px;
+    left: 50px;
+    transform: rotateZ(-45deg);
+    clip-path: polygon(50% 15%, 61% 4%, 75% 0%, 87% 5%, 100% 20%, 
+                       100% 37%, 91% 50%, 75% 67%, 50% 90%, 25% 67%, 
+                       9% 50%, 0% 37%, 0% 20%, 13% 5%, 25% 0%, 39% 4%);
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="neon-text" id="neonText"></div>
+  </div>
+  <p class="fras">¿ Quieres ser mi San Valentin🥹🥺?</p>
+  <a class="button" target="_blank" href="detalle.html">Descubre</a>
+  <img class="img1" src="imagenes/ellos1.jpg" alt="">
+  <img class="img2" src="imagenes/ellos2.jpg" alt="">
+  <img class="img3" src="imagenes/ellos3.jpg" alt="">
+  <img class="img4" src="imagenes/ellos4.jpg" alt="">
+
+  <script>
+    const neonText = document.getElementById('neonText');
+    const text = "¡Hola!, Feliz Día de San Valentin❤️😘";
+    let index = 0;
+
+    function writeText() {
+      if (index < text.length) {
+        neonText.textContent += text.charAt(index);
+        index++;
+        setTimeout(writeText, 200); // Ajusta la velocidad aquí
+      }
+    }
+
+    writeText(); // Inicia la escritura al cargar la página
+  </script>
+</body>
+</html>
